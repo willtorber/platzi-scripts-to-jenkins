@@ -1,3 +1,3 @@
 # Platzi Scripts
 
-Dummy tests are in `jenkins-tests`
+Dummy scripts used to test `Jenkins` functionalities.

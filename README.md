@@ -9,10 +9,12 @@ Es posible conectar un repositorio de GitHub a Jenkins, de modo que cuando ocurr
 
 ### Jenkins:
 1. Verificar que el **GitHub plugin** esté instalado (en caso de no estarlo proceder a instalarlo).
-2. Al crear el Job, se debe marcar en la sección SCM (Source Code Management) la opción de Git, y pegar la URL del repositorio (para esta acción el host de Jenkins debe tener instalado Git).
+2. Se crea el Job de acuerdo a la necesidad del proyecto.
+3. En la sección _General_ se marca la opción "Github Project" y se ingresa la URL de acceso del repositorio.
+4. En la sección _SCM (Source Code Management)_ se marca la opción "Git", y se ingresa la URL del repositorio que permite la clonación (el host de Jenkins debe tener instalado Git).
     + En el apartado "Branches to build" se especifica el branch que Jenkins identificará y monitoreará. 
-    +	En caso de presentarse este error: **(403) No valid crumb was included in the request Jenkins**, en este [post](https://stackoverflow.com/questions/44711696/jenkins-403-no-valid-crumb-was-included-in-the-request) de Stackoverflow se plantean soluciones.
-3.	En la sección "Build Triggers" se debe marcar la opción "GitHub hook trigger for GITScm polling".
+    + En caso de presentarse este error: **(403) No valid crumb was included in the request Jenkins**, en este [post](https://stackoverflow.com/questions/44711696/jenkins-403-no-valid-crumb-was-included-in-the-request) de Stackoverflow se plantean soluciones.
+3.	En la sección _Build Triggers_ se marca la opción "GitHub hook trigger for GITScm polling".
 ### GitHub:
 1.	Ingresar al repositorio de GitHub.
 2.	Ingresar en la sección Settings -> Webhooks.
